@@ -32,3 +32,24 @@ app/
 - This is a single-app website, not the multi-page Next.js from training data
 - Follow breaking changes documented in `node_modules/next/dist/docs/`
 - Use Tailwind v4 syntax (modern utility classes)
+
+## Deployment Instructions
+1. Link your Vercel account and deploy this repo to a production project:
+   ```bash
+   vercel login
+   vercel deploy --prod
+   ```
+2. Pull environment variables from Vercel (if you have them set):
+   ```bash
+   vercel env pull
+   ```
+3. Build for production:
+   ```bash
+   vercel build --prod
+   ```
+4. Deploy to production:
+   ```bash
+   vercel deploy --prod
+   ```
+
+See the [Vercel CLI docs](https://vercel.com/docs/cli) for more commands.
