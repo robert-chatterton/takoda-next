@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ARTIST_NAME } from "../constants"
 
 export default function BioPage() {
   return (
@@ -8,7 +9,7 @@ export default function BioPage() {
       <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">About</h2>
         <p className="text-neutral-400 leading-relaxed">
-          Artist Name is a singer/songwriter based in [City], known for their intimate lyrics and
+          {ARTIST_NAME} is a singer/songwriter based in [City], known for their intimate lyrics and
           dynamic live performances. Drawing from personal experiences and observations, each song
           tells a story of love, heartbreak, hope, and the journey of self-discovery.
         </p>
@@ -33,7 +34,7 @@ export default function BioPage() {
           ].map((item, i) => (
             <div key={i} className="pb-6 border-b border-neutral-900 last:border-0">
               <span className="text-neutral-500 text-sm">{item.outlet}</span>
-              <p className="text-neutral-300 mt-1 italic">"{item.quote}"</p>
+              <p className="text-neutral-300 mt-1 italic">&quot;{item.quote}&quot;</p>
             </div>
           ))}
         </div>

@@ -53,3 +53,18 @@ app/
    ```
 
 See the [Vercel CLI docs](https://vercel.com/docs/cli) for more commands.
+
+## Build Notes
+Use `npm` instead of `pnpm` to avoid issues with Tailwind CSS's @tailwindcss/oxide native bindings on some systems.
+
+```bash
+npm install
+npm run build
+```
+
+## Important: Use Link Component for All Internal Navigation
+Never use `<a>` tags for internal page navigation - always use `Link` from `next/link`:
+- Import as: `import Link from "next/link"`
+- Replace all `<a href="/...">` with `<Link href="/...">`
+- This includes the logo link in layout.tsx and all nav menu items
+- Only use regular `<a>` tags for external links or mailto: URLs (prefer Link even for mailto)
