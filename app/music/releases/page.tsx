@@ -1,62 +1,70 @@
 import Link from "next/link"
+import { RELEASES } from "./releases"
+import { BandcampIcon } from "@/app/components/BandcampIcon"
+import { SpotifyIcon } from "@/app/components/SpotifyIcon"
+import { AppleMusicIcon } from "@/app/components/AppleMusicIcon"
 
 export default function ReleasesPage() {
-  const releases = [
-    {
-      title: "Album Title",
-      year: 2025,
-      type: "Album",
-      description: "A deeply personal collection of songs exploring love, loss, and finding yourself.",
-    },
-    {
-      title: "Single Title",
-      year: 2026,
-      type: "Single",
-      description: "Latest single from upcoming album.",
-    },
-    {
-      title: "EP Title",
-      year: 2024,
-      type: "EP",
-      description: "Four tracks that defined a moment.",
-    },
-  ]
-
   return (
     <div className="max-w-4xl mx-auto px-6 py-24">
       <h1 className="text-5xl font-bold mb-6 tracking-tight">Music</h1>
       <p className="text-neutral-400 text-lg mb-16">
-        All releases, available on all major streaming platforms.
+        Music descriptive text should go here.
       </p>
 
-      <div className="space-y-12">
-        {releases.map((release, i) => (
+      <div className="space-y-8">
+        {RELEASES.map((release, i) => (
           <div key={i} className="group">
-            <div className="flex flex-col sm:flex-row gap-6 mb-6 group-hover:bg-neutral-900/30 p-6 -mx-6 transition-colors">
-              <div className="aspect-square bg-neutral-900 flex-shrink-0" />
-              <div className="flex-1">
-                <span className="text-neutral-500 text-sm font-mono">{release.type} • {release.year}</span>
-                <h2 className="text-3xl font-semibold mt-2 mb-4">{release.title}</h2>
-                <p className="text-neutral-400">{release.description}</p>
+            {/* Release Info */}
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-3 mb-4">
+              <div>
+                <h2 className="text-3xl font-semibold">{release.title}</h2>
+                <span className="text-neutral-500 text-sm font-mono mt-2">
+                  {release.type} &middot; {release.year}
+                </span>
               </div>
-              <Link href={`/music/releases#${release.year}`}>
-                <span className="text-neutral-500 group-hover:text-white transition-colors">Listen →</span>
-              </Link>
+
+              {/* Share Links */}
+              <div className="flex flex-row gap-4 items-center">
+                <p className="text-neutral-400 tracking-tight text-sm">Listen on</p>
+                <Link
+                  href={`https://open.spotify.com/track/${release.spotifyUrl}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/link hover:scale-110 transition-transform duration-150 ease-out -m-0.5"
+                >
+                  <SpotifyIcon />
+                </Link>
+                <Link
+                  href={`https://music.apple.com/us/song/${release.appleMusicUrl}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/link hover:scale-110 transition-transform duration-150 ease-out -m-0.5"
+                >
+                  <AppleMusicIcon />
+                </Link>
+                <Link
+                  href={`https://takodadionne.bandcamp.com/track/${release.bandcampSlug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/link hover:scale-110 transition-transform duration-150 ease-out -m-0.5"
+                >
+                  <BandcampIcon />
+                </Link>
+              </div>
             </div>
+
+            {/* Bandcamp Embed */}
+            <iframe
+              style={{ border: "0", width: "100%", height: "120px" }}
+              src={`https://bandcamp.com/EmbeddedPlayer/track=${release.trackId}/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/transparent=true/`}
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              seamless
+            />
           </div>
         ))}
       </div>
-
-      <section className="mt-20 pt-16 border-t border-neutral-900">
-        <h2 className="text-2xl font-semibold mb-8 text-center">Streaming Links</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          {["Spotify", "Apple Music", "YouTube", "Amazon Music"].map((platform) => (
-            <a key={platform} href={`/#${platform.toLowerCase()}`} className="px-6 py-3 bg-neutral-900 border border-neutral-800 hover:border-white transition-colors">
-              {platform}
-            </a>
-          ))}
-        </div>
-      </section>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ARTIST_NAME } from "./constants"
 
-const inter = Inter({
+const INTER = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 })
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased bg-neutral-950 text-neutral-100`}>
+    <html lang="en" className={`${INTER.variable} h-full antialiased bg-neutral-950 text-neutral-100`}>
       <body className="min-h-full flex flex-col font-sans">
         <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-sm border-b border-neutral-900">
           <nav className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
