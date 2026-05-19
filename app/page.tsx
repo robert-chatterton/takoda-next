@@ -22,7 +22,7 @@ export default function Home() {
               Listen Now
             </Link>
             <Link
-              href="/tour"
+              href="/upcoming-shows"
               className="px-8 py-4 border border-neutral-700 text-neutral-300 hover:border-white hover:text-white transition-colors"
             >
               Tour Dates
@@ -128,21 +128,11 @@ export default function Home() {
       {/* Contact/Booking */}
       <section className="max-w-2xl mx-auto px-6 py-24 text-center">
         <h2 className="text-2xl font-semibold mb-4">Contact & Bookings</h2>
-        <p className="text-neutral-400 mb-8">
-          Send me an email at{' '}
-          <Link
-            href="mailto:takodadionne@gmail.com"
-            className="text-white hover:underline"
-          >
-            takodadionne@gmail.com
-          </Link>{' '}
-          to book me for a show, private party, or event!
-        </p>
         <Link
           href="/contact"
-          className="px-6 py-3 border border-neutral-700 text-neutral-300 hover:border-white hover:text-white transition-colors rounded-lg"
+          className="text-neutral-400 hover:underline underline-offset-4 decoration-neutral-400"
         >
-          Full Contact Information
+          Contact Me!
         </Link>
       </section>
     </main>

@@ -45,8 +45,8 @@ export default function BioPage() {
         <p className="text-neutral-400 mb-4">
           For bookings, press inquiries, or partnerships:
         </p>
-        <Link href="/contact" className="text-white underline decoration-neutral-700 underline-offset-4 hover:text-neutral-300">
-          Contact Management →
+        <Link href="/contact" className="group/link hover:underline underline-offset-4 decoration-neutral-400">
+          Contact Me!
         </Link>
       </section>
     </div>

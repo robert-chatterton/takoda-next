@@ -26,7 +26,7 @@ export default function ReleasesPage() {
 
               {/* Share Links */}
               <div className="flex flex-row gap-4 items-center">
-                <p className="text-neutral-400 tracking-tight text-sm">Listen on</p>
+                <p className="text-neutral-400 tracking-tight font-mono text-xs">stream on</p>
                 <Link
                   href={`https://open.spotify.com/track/${release.spotifyUrl}`}
                   target="_blank"

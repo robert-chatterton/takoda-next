@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useEffect } from "react"
 
 export default function UpcomingShowsPage() {
@@ -21,6 +22,12 @@ export default function UpcomingShowsPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-24">
       <h1 className="text-5xl font-bold mb-8 tracking-tight">Upcoming Shows</h1>
+      <p className="text-neutral-400 text-lg mb-16">
+        For booking inquiries or to request a show in your area, please reach out through the{" "}
+          <Link href="/contact" className="group/link hover:underline underline-offset-4 decoration-neutral-400">
+            Contact Page.
+          </Link>
+      </p>
 
       <section id="shows" className="w-full flex flex-col mt-8 bg-neutral-900 py-6 px-3 text-white font-light z-10 shadow-lg gap-2">
         <div
@@ -28,7 +35,7 @@ export default function UpcomingShowsPage() {
           className="bit-widget-initializer"
           data-artist-name='id_15588782'
           data-events-to-display=''
-          data-background-color='rgba(31,41,55,1)'
+          data-background-color='rgba(31,41,55,0)'
           data-separator-color='rgba(99,102,106,1)'
           data-text-color='rgba(255,255,255,1)'
           data-font='Helvetica'

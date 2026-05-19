@@ -29,7 +29,6 @@ export default function RootLayout({
             </Link>
             <div className="hidden md:flex gap-8">
               <Link href="/music/releases" className="text-neutral-400 hover:text-white transition-colors text-sm">Music</Link>
-              <Link href="/video" className="text-neutral-400 hover:text-white transition-colors text-sm">Video</Link>
               <Link href="/upcoming-shows" className="text-neutral-400 hover:text-white transition-colors text-sm">Upcoming Shows</Link>
               <Link href="/bio" className="text-neutral-400 hover:text-white transition-colors text-sm">Bio</Link>
             </div>
