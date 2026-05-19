@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { LOWER_ARTIST_NAME } from "./constants"
+import { RELEASES } from "./releases"
+import { ReleaseLink } from "./components/ReleaseLink"
 
 export default function Home() {
   return (
@@ -52,26 +54,9 @@ export default function Home() {
       <section className="max-w-4xl mx-auto px-6 py-24">
         <h2 className="text-3xl font-semibold mb-10">Latest Releases</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          <Link href="/music/releases" className="group block cursor-pointer">
-            <div className="aspect-square bg-neutral-900 mb-6 group-hover:bg-neutral-800 transition-colors relative overflow-hidden">
-              <Image
-                src="/images/music/train-station-cover.jpg"
-                alt="Train Station EP cover"
-                fill
-                className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-              />
-            </div>
-            <h3 className="font-medium text-xl">Train Station</h3>
-            <p className="text-neutral-500 mt-2 text-sm">EP • 2026</p>
-          </Link>
-
-          <Link href="/music/releases" className="group block cursor-pointer">
-            <div className="aspect-square bg-neutral-900 mb-6 group-hover:bg-neutral-800 transition-colors relative overflow-hidden flex items-center justify-center">
-              <span className="text-neutral-500 text-sm font-medium">Previous Release</span>
-            </div>
-            <h3 className="font-medium text-xl">Check Out My Music</h3>
-            <p className="text-neutral-500 mt-2 text-sm">Available on all platforms</p>
-          </Link>
+          {RELEASES.slice(0, 5).map((release, idx) => (
+            <ReleaseLink key={idx} release={release} />
+          ))}
 
           <Link href="/music/releases" className="group block cursor-pointer">
             <div className="aspect-square bg-neutral-900 mb-6 group-hover:bg-neutral-800 transition-colors relative overflow-hidden flex items-center justify-center">
