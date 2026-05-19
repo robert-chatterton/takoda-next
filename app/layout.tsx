@@ -1,13 +1,13 @@
 import Link from "next/link"
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { ARTIST_NAME } from "./constants"
+import { ARTIST_NAME, LOWER_ARTIST_NAME } from "./constants"
+import { Music } from "lucide-react"
+import localFont from 'next/font/local'
 
-const INTER = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-})
+const STACK_SANS_FONT = localFont({
+  src: './fonts/StackSansHeadline-VariableFont_wght.ttf',
+});
 
 export const metadata: Metadata = {
   title: `${ARTIST_NAME} - Live Looping Musician`,
@@ -20,17 +20,26 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${INTER.variable} h-full antialiased bg-neutral-950 text-neutral-100`}>
+    <html lang="en" className={`${STACK_SANS_FONT.className} h-full antialiased bg-neutral-950 text-neutral-100`}>
       <body className="min-h-full flex flex-col font-sans">
         <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-sm border-b border-neutral-900">
           <nav className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link href="/" className="font-semibold text-lg hover:opacity-70 transition-opacity">
-              {ARTIST_NAME}
+              {LOWER_ARTIST_NAME}
             </Link>
             <div className="hidden md:flex gap-8">
-              <Link href="/music/releases" className="text-neutral-400 hover:text-white transition-colors text-sm">Music</Link>
-              <Link href="/upcoming-shows" className="text-neutral-400 hover:text-white transition-colors text-sm">Upcoming Shows</Link>
-              <Link href="/bio" className="text-neutral-400 hover:text-white transition-colors text-sm">Bio</Link>
+              <Link href="/music/releases" className="flex flex-row items-center gap-1 text-neutral-400 hover:text-white transition-colors text-sm">
+                <Music className="w-4 h-4" />
+                music
+              </Link>
+              <Link href="/upcoming-shows" className="flex flex-row items-center gap-1 text-neutral-400 hover:text-white transition-colors text-sm">
+                <Music className="w-4 h-4" />
+                upcoming shows
+              </Link>
+              <Link href="/bio" className="flex flex-row items-center gap-1 text-neutral-400 hover:text-white transition-colors text-sm">
+                <Music className="w-4 h-4" />
+                bio
+              </Link>
             </div>
             <Link
               href="/contact"

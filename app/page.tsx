@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ARTIST_NAME } from "./constants"
+import { LOWER_ARTIST_NAME } from "./constants"
 
 export default function Home() {
   return (
@@ -16,24 +16,24 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/60 to-neutral-950" />
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight">
-            {ARTIST_NAME}
+          <h1 className="flex items-center justify-center text-6xl md:text-8xl font-bold mb-6 tracking-tight">
+            {LOWER_ARTIST_NAME}
           </h1>
-          <p className="text-xl md:text-2xl text-neutral-400 mb-10">
-            Live Looping Singer-Songwriter
+          <p className="text-xl md:text-2xl text-neutral-400 mb-10 font-thin tracking-tight mx-20">
+            live looping singer-songwriter based in <span className="text-neutral-200">bar harbor, maine</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/music/releases"
-              className="px-8 py-4 bg-white text-black font-semibold hover:bg-neutral-200 transition-colors"
+              className="px-8 py-4 border border-neutral-700 text-neutral-300 opacity-80 hover:border-white hover:opacity-100"
             >
-              Music
+              music
             </Link>
             <Link
               href="/upcoming-shows"
-              className="px-8 py-4 border border-neutral-700 text-neutral-300 hover:border-white hover:text-white transition-colors"
+              className="px-8 py-4 border border-neutral-700 text-neutral-300 opacity-80 hover:border-white hover:opacity-100"
             >
-              Shows
+              shows
             </Link>
           </div>
         </div>
