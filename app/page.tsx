@@ -1,15 +1,23 @@
 import Image from "next/image"
 import Link from "next/link"
+import { ARTIST_NAME } from "./constants"
 
 export default function Home() {
   return (
     <main className="flex-1">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900 to-neutral-950" />
+        <Image
+          src="/images/DSC00986.jpeg"
+          alt=""
+          fill
+          className="object-cover object-[50%_20%]"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/60 to-neutral-950" />
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight">
-            Takoda Dionne
+            {ARTIST_NAME}
           </h1>
           <p className="text-xl md:text-2xl text-neutral-400 mb-10">
             Live Looping Singer-Songwriter
@@ -19,13 +27,13 @@ export default function Home() {
               href="/music/releases"
               className="px-8 py-4 bg-white text-black font-semibold hover:bg-neutral-200 transition-colors"
             >
-              Listen Now
+              Music
             </Link>
             <Link
               href="/upcoming-shows"
               className="px-8 py-4 border border-neutral-700 text-neutral-300 hover:border-white hover:text-white transition-colors"
             >
-              Tour Dates
+              Shows
             </Link>
           </div>
         </div>
