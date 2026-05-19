@@ -16,22 +16,31 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/60 to-neutral-950" />
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="flex items-center justify-center text-6xl md:text-8xl font-bold mb-6 tracking-tight">
+          <h1
+            className={`flex items-center justify-center text-6xl md:text-8xl font-bold mb-6 tracking-tight bg-linear-to-r from-pink-500 via-red-500 to-yellow-500 bg-[length:200%_auto] animate-shine`}
+            style={{
+              backgroundSize: '200% auto',
+              animation: 'shine 8s ease-in-out infinite',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              WebkitTextStroke: '0px',
+            }}
+          >
             {LOWER_ARTIST_NAME}
           </h1>
           <p className="text-xl md:text-2xl text-neutral-400 mb-10 font-thin tracking-tight mx-20">
-            live looping singer-songwriter based in <span className="text-neutral-200">bar harbor, maine</span>
+            live looping singer-songwriter based in <span className="text-neutral-200 font-semibold">bar harbor, maine</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/music/releases"
-              className="px-8 py-4 border border-neutral-700 text-neutral-300 opacity-80 hover:border-white hover:opacity-100"
+              className="px-8 py-4 border border-neutral-700 text-neutral-100 opacity-70 hover:opacity-100 transition-opacity"
             >
               music
             </Link>
             <Link
               href="/upcoming-shows"
-              className="px-8 py-4 border border-neutral-700 text-neutral-300 opacity-80 hover:border-white hover:opacity-100"
+              className="px-8 py-4 border border-neutral-700 text-neutral-100 opacity-70 hover:opacity-100 transition-opacity"
             >
               shows
             </Link>

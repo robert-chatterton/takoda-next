@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { RELEASES } from "./releases"
+import { RELEASES } from "../../releases"
 import { BandcampIcon } from "@/app/components/BandcampIcon"
 import { SpotifyIcon } from "@/app/components/SpotifyIcon"
 import { AppleMusicIcon } from "@/app/components/AppleMusicIcon"

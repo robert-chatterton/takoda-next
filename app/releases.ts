@@ -23,7 +23,7 @@ export const RELEASES: Release[] = [
     trackId: "2416956967",
     title: "Back To",
     type: "Single",
-    year: 2025,
+    year: 2026,
     bandcampSlug: "back-to",
     spotifyUrl: "54uQjn41V11deiHUeSK4WN",
     appleMusicUrl: "back-to/1860161362",
