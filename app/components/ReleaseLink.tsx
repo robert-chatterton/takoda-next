@@ -4,7 +4,7 @@ import { Release } from "../releases";
 
 export function ReleaseLink({ release }: { release: Release }) {
   return (
-    <Link href="/music/releases" className="group block cursor-pointer">
+    <Link href="/music" className="group block cursor-pointer">
       <div className="aspect-square bg-neutral-900 mb-6 group-hover:bg-neutral-800 transition-colors relative overflow-hidden">
         <Image
           src={`/images/music/${release.albumArt}`}

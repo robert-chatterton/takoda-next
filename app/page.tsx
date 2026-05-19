@@ -1,54 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { LOWER_ARTIST_NAME } from "./constants"
 import { RELEASES } from "./releases"
 import { ReleaseLink } from "./components/ReleaseLink"
+import { HeroCarousel } from "./components/HeroCarousel"
 
 export default function Home() {
   return (
     <main className="flex-1">
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src="/images/DSC00986.jpeg"
-          alt=""
-          fill
-          className="object-cover object-[50%_20%]"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/60 to-neutral-950" />
-        <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1
-            className={`flex items-center justify-center text-6xl md:text-8xl font-bold mb-6 tracking-tight bg-linear-to-r from-pink-500 via-red-500 to-yellow-500 bg-[length:200%_auto] animate-shine`}
-            style={{
-              backgroundSize: '200% auto',
-              animation: 'shine 8s ease-in-out infinite',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              WebkitTextStroke: '0px',
-            }}
-          >
-            {LOWER_ARTIST_NAME}
-          </h1>
-          <p className="text-xl md:text-2xl text-neutral-400 mb-10 font-thin tracking-tight mx-20">
-            live looping singer-songwriter based in <span className="text-neutral-200 font-semibold">bar harbor, maine</span>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/music/releases"
-              className="px-8 py-4 border border-neutral-700 text-neutral-100 opacity-70 hover:opacity-100 transition-opacity"
-            >
-              music
-            </Link>
-            <Link
-              href="/upcoming-shows"
-              className="px-8 py-4 border border-neutral-700 text-neutral-100 opacity-70 hover:opacity-100 transition-opacity"
-            >
-              shows
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       {/* Latest Releases */}
       <section className="max-w-4xl mx-auto px-6 py-24">
@@ -58,12 +17,12 @@ export default function Home() {
             <ReleaseLink key={idx} release={release} />
           ))}
 
-          <Link href="/music/releases" className="group block cursor-pointer">
+          <Link href="/music" className="group block cursor-pointer">
             <div className="aspect-square bg-neutral-900 mb-6 group-hover:bg-neutral-800 transition-colors relative overflow-hidden flex items-center justify-center">
-              <span className="text-neutral-500 text-sm font-medium">More Music</span>
+              <span className="text-neutral-500 text-sm font-medium">See more of my music</span>
             </div>
             <h3 className="font-medium text-xl">Listen Now</h3>
-            <p className="text-neutral-500 mt-2 text-sm">Spotify • Apple Music & more</p>
+            <p className="text-neutral-500 mt-2 text-sm">Spotify • Apple Music • Bandcamp & more</p>
           </Link>
         </div>
       </section>

@@ -28,7 +28,7 @@ export default function RootLayout({
               {LOWER_ARTIST_NAME}
             </Link>
             <div className="hidden md:flex gap-8">
-              <Link href="/music/releases" className="flex flex-row items-center gap-1 text-neutral-100 opacity-70 hover:opacity-100 transition-opacity text-sm">
+              <Link href="/music" className="flex flex-row items-center gap-1 text-neutral-100 opacity-70 hover:opacity-100 transition-opacity text-sm">
                 <Music className="w-4 h-4" />
                 music
               </Link>
