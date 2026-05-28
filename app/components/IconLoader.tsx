@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 interface IconLoaderProps {
   src: string;
@@ -19,13 +19,13 @@ interface IconLoaderProps {
  */
 export function IconLoader({
   src,
-  alt = "",
+  alt = '',
   width = 64,
   height = 64,
-  className = "",
+  className = '',
 }: IconLoaderProps) {
   // Determine if image is already cached to conditionally apply priority
-  const isDynamic = src.includes("bandcamp.com/EmbeddedPlayer");
+  const isDynamic = src.includes('bandcamp.com/EmbeddedPlayer');
 
   return (
     <Image
