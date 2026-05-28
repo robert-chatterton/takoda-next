@@ -12,7 +12,7 @@ export function HeroCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1 >= 3 ? 0 : prev + 1));
-    }, 8_000);
+    }, 5_000);
 
     return () => clearInterval(interval);
   }, []);

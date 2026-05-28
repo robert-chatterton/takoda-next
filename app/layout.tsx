@@ -2,7 +2,7 @@ import Link from 'next/link';
 import './globals.css';
 import type { Metadata } from 'next';
 import { ARTIST_NAME, LOWER_ARTIST_NAME } from './constants';
-import { Music, MicVocal, UserRound } from 'lucide-react';
+import { Music, MicVocal, UserRound, Image as ImageIcon } from 'lucide-react';
 import localFont from 'next/font/local';
 
 const STACK_SANS_FONT = localFont({
@@ -48,6 +48,13 @@ export default function RootLayout({
               >
                 <MicVocal className='w-4 h-4' />
                 upcoming shows
+              </Link>
+              <Link
+                href='/gallery'
+                className='flex flex-row items-center gap-1 text-neutral-100 opacity-70 hover:opacity-100 transition-opacity text-sm'
+              >
+                <ImageIcon className='w-4 h-4' />
+                gallery
               </Link>
               <Link
                 href='/bio'
