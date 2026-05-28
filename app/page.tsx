@@ -3,6 +3,7 @@ import Link from "next/link"
 import { RELEASES } from "./releases"
 import { ReleaseLink } from "./components/ReleaseLink"
 import { HeroCarousel } from "./components/HeroCarousel"
+import { BLOB_STORAGE_URL } from "./constants"
 
 export default function Home() {
   return (
@@ -29,25 +30,36 @@ export default function Home() {
 
       {/* About Section */}
       <section className="max-w-4xl mx-auto px-6 py-24 border-t border-neutral-900">
-        <h2 className="text-3xl font-semibold mb-10">About Me</h2>
+        <h2 className="text-3xl font-semibold mb-10">About Takoda</h2>
         <div className="bg-neutral-900/50 rounded-lg p-8">
           <p className="text-lg text-neutral-300 mb-6 leading-relaxed">
-            Takoda Dionne is a live looping singer-songwriter born and raised on the coast of Maine and currently based in Bar Harbor.
+            Takoda Dionne is a live looping singer-songwriter born and raised on
+            the coast of Maine and currently based in Bar Harbor.
           </p>
           <p className="text-lg text-neutral-300 mb-6 leading-relaxed">
-            He plays a curated selection of covers and originals, both live looped and acoustic, using guitar and piano. Takoda&apos;s music is a thoughtful blend of pop, rock, folk and hip-hop with honest lyrics. His impressive live performances are celebrated for his songwriting ability and technical musical skills.
+            He plays a curated selection of covers and originals, both live looped
+            and acoustic, using guitar and piano. Takoda&apos;s music is a thoughtful
+            blend of pop, rock, folk and hip-hop with honest lyrics. His
+            impressive live performances are celebrated for his songwriting
+            ability and technical musical skills.
           </p>
-          <div className="rounded-lg my-6 overflow-hidden">
-            <Image
-              src="/images/DSC_0272.png"
-              alt="Takoda performing live at a venue"
-              width={800}
-              height={600}
-              className="w-full max-w-md mx-auto"
-            />
-          </div>
+          <Image
+            src={`${BLOB_STORAGE_URL}/gallery/DSC00743.JPG`}
+            alt=""
+            width={200}
+            height={400}
+            className="rounded-lg mb-6 overflow-hidden w-full max-w-md mx-auto grayscale"
+          />
           <p className="text-lg text-neutral-300 mb-6 leading-relaxed">
-            Using live looping, Takoda layers acoustic guitar, percussion, bass and vocals using a single guitar and piano. He adds his fiery vocals and layered harmonies to create the sound of a multi-instrumental band with multiple singers. His music is always live with nothing pre-recorded.
+            Using live looping, Takoda layers acoustic guitar, percussion, bass
+            and vocals using a single guitar and piano. He adds his fiery vocals
+            and layered harmonies to create the sound of a multi-instrumental band
+            with multiple singers. His music is always live with nothing
+            pre-recorded.
+          </p>
+          <p className="text-lg text-neutral-300 mb-6 leading-relaxed">
+            Takoda is a tireless performer who performs a two hour concert with
+            enthusiasm and effortless charm. Catch him if you can!
           </p>
         </div>
       </section>

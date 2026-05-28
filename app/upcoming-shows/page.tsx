@@ -20,9 +20,9 @@ export default function UpcomingShowsPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-24">
       <h1 className="text-5xl font-bold mb-8 tracking-tight">Upcoming Shows</h1>
-      <p className="text-neutral-400 text-lg mb-16">
+      <p className="text-neutral-400 font-light text-lg mb-16">
         For booking inquiries or to request a show in your area, please reach out through the{" "}
-          <Link href="/contact" className="group/link hover:underline underline-offset-4 decoration-neutral-400">
+          <Link href="/contact" className="group/link text-neutral-200 font-semibold hover:underline underline-offset-4 decoration-neutral-200">
             Contact Page.
           </Link>
       </p>
@@ -75,11 +75,11 @@ export default function UpcomingShowsPage() {
       </section>
 
       <div className="mt-12 text-center">
-        <p className="text-neutral-400 text-sm">
-          For booking inquiries or to request a show in your area, please reach out via{" "}
-          <a href="/contact" className="text-neutral-400 hover:text-white transition-colors">
-            Contact
-          </a>
+        <p className="text-neutral-400 font-light text-lg mb-16">
+          For booking inquiries or to request a show in your area, please reach out through the{" "}
+          <Link href="/contact" className="group/link text-neutral-200 font-semibold hover:underline underline-offset-4 decoration-neutral-200">
+            Contact Page.
+          </Link>
         </p>
       </div>
     </div>
