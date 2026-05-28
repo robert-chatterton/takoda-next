@@ -15,3 +15,5 @@ export const INSTAGRAM = 'https://www.instagram.com/takodadionne/';
 export const FACEBOOK = 'https://www.facebook.com/profile.php?id=61573557910394';
 export const EMAIL = 'takodadionne@gmail.com';
 export const LINKTREE = 'https://linktr.ee/takodadionne';
+
+export const BLOB_STORAGE_URL = 'https://neskzhtsnjxbig5c.public.blob.vercel-storage.com';

@@ -4,24 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { LOWER_ARTIST_NAME } from "../constants";
+import { HERO_CAROUSEL_IMAGES } from "../images";
 
 
 export function HeroCarousel() {
-  const images: string[] = ["/images/DSC00581.JPG", "/images/DSC00986.jpeg", "/images/DSC01111.jpeg"]
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Slow fade transition - changes every 8 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => prev + 1 >= images.length ? 0 : prev + 1);
+      setCurrentIndex((prev) => prev + 1 >= HERO_CAROUSEL_IMAGES.length ? 0 : prev + 1);
     }, 10_000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, []);
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-      {images.map((src, idx) => (
+      {HERO_CAROUSEL_IMAGES.map((src, idx) => (
         <Image
           key={src}
           src={src}

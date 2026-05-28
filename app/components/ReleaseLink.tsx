@@ -7,7 +7,7 @@ export function ReleaseLink({ release }: { release: Release }) {
     <Link href="/music" className="group block cursor-pointer">
       <div className="aspect-square bg-neutral-900 mb-6 group-hover:bg-neutral-800 transition-colors relative overflow-hidden">
         <Image
-          src={`/images/music/${release.albumArt}`}
+          src={release.albumArt}
           alt={release.title}
           fill
           className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
