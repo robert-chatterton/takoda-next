@@ -16,8 +16,6 @@ export default function UpcomingShowsPage() {
     }
   }, [])
 
-  // Configure Bands in Town widget via data attributes
-  const widgetId = "upcoming-shows-widget"
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-24">
@@ -31,7 +29,6 @@ export default function UpcomingShowsPage() {
 
       <section id="shows" className="w-full flex flex-col mt-8 bg-neutral-900 py-6 px-3 text-white font-light z-10 shadow-lg gap-2">
         <div
-          id={widgetId}
           className="bit-widget-initializer"
           data-artist-name='id_15588782'
           data-events-to-display=''

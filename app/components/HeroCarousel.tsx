@@ -3,8 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { LOWER_ARTIST_NAME } from "../constants";
-import { HERO_CAROUSEL_IMAGES } from "../images";
+import { BLOB_STORAGE_URL, LOWER_ARTIST_NAME } from "../constants";
 
 
 export function HeroCarousel() {
@@ -13,26 +12,45 @@ export function HeroCarousel() {
   // Slow fade transition - changes every 8 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => prev + 1 >= HERO_CAROUSEL_IMAGES.length ? 0 : prev + 1);
-    }, 10_000);
+      setCurrentIndex((prev) => prev + 1 >= 3 ? 0 : prev + 1);
+    }, 8_000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-      {HERO_CAROUSEL_IMAGES.map((src, idx) => (
-        <Image
-          key={src}
-          src={src}
-          alt=""
-          fill
-          className={`object-cover object-[50%_10%] transition-opacity duration-1000 ease-in-out grayscale ${
-            idx === currentIndex ? "opacity-100" : "opacity-0"
-          }`}
-          priority={idx === currentIndex}
-        />
-      ))}
+      <Image
+        src={`${BLOB_STORAGE_URL}/gallery/IMG_8379.jpg`}
+        alt=""
+        fill
+        className={`object-cover object-[50%_20%] transition-opacity duration-1000 ease-in-out grayscale ${
+          0 === currentIndex ? "opacity-100" : "opacity-0"
+        }`}
+        loading={'eager'}
+        priority={0 === currentIndex}
+      />
+      <Image
+        src={`${BLOB_STORAGE_URL}/gallery/DSC00945.jpeg`}
+        alt=""
+        fill
+        className={`object-cover object-[50%_12%] transition-opacity duration-1000 ease-in-out grayscale ${
+          1 === currentIndex ? "opacity-100" : "opacity-0"
+        }`}
+        loading={'eager'}
+        priority={1 === currentIndex}
+      />
+      <Image
+        src={`${BLOB_STORAGE_URL}/gallery/DSC00985.jpeg`}
+        alt=""
+        fill
+        className={`object-cover object-[50%_30%] transition-opacity duration-1000 ease-in-out grayscale ${
+          2 === currentIndex ? "opacity-100" : "opacity-0"
+        }`}
+        loading={'eager'}
+        priority={2 === currentIndex}
+      />
+
       <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/60 via-neutral-950/40 to-neutral-950" />
       <div className="relative z-10 text-center px-6 max-w-4xl">
         <h1

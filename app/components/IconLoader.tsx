@@ -31,11 +31,11 @@ export function IconLoader({
     <Image
       src={src}
       alt={alt}
+      className={`transition-opacity duration-200 ${className}`}
       width={width}
       height={height}
-      className={`transition-opacity duration-200 ${className}`}
       priority={isDynamic ? false : undefined}
-      unoptimized={isDynamic} // Bandcamp embeds are external, don't optimize
+      unoptimized={isDynamic}
     />
   )
 }
