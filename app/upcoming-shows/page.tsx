@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useEffect } from "react"
+import { IconLink } from "../components/IconLink";
 
 export default function UpcomingShowsPage() {
   useEffect(() => {
@@ -20,11 +21,9 @@ export default function UpcomingShowsPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-24">
       <h1 className="text-5xl font-bold mb-8 tracking-tight">Upcoming Shows</h1>
-      <p className="text-neutral-400 font-light text-lg mb-16">
+      <p className="text-neutral-400 font-light text-lg mb-16 flex flex-row items-center gap-1">
         For booking inquiries or to request a show in your area, please reach out through the{" "}
-          <Link href="/contact" className="group/link text-neutral-200 font-semibold hover:underline underline-offset-4 decoration-neutral-200">
-            Contact Page.
-          </Link>
+        <IconLink href={'/contact'} title={'Contact Page'} />
       </p>
 
       <section id="shows" className="w-full flex flex-col mt-8 bg-neutral-900 py-6 px-3 text-white font-light z-10 shadow-lg gap-2">
@@ -75,11 +74,9 @@ export default function UpcomingShowsPage() {
       </section>
 
       <div className="mt-12 text-center">
-        <p className="text-neutral-400 font-light text-lg mb-16">
+        <p className="text-neutral-400 font-light text-lg mb-16 flex flex-row items-center gap-1">
           For booking inquiries or to request a show in your area, please reach out through the{" "}
-          <Link href="/contact" className="group/link text-neutral-200 font-semibold hover:underline underline-offset-4 decoration-neutral-200">
-            Contact Page.
-          </Link>
+          <IconLink href={'/contact'} title={'Contact Page'} />
         </p>
       </div>
     </div>

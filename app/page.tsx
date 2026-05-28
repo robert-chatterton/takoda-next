@@ -4,6 +4,8 @@ import { RELEASES } from "./releases"
 import { ReleaseLink } from "./components/ReleaseLink"
 import { HeroCarousel } from "./components/HeroCarousel"
 import { BLOB_STORAGE_URL } from "./constants"
+import { GALLERY_IMAGES } from "./gallery"
+import { IconLink } from "./components/IconLink"
 
 export default function Home() {
   return (
@@ -67,46 +69,31 @@ export default function Home() {
       {/* Gallery Preview */}
       <section className="max-w-4xl mx-auto px-6 py-24 border-t border-neutral-900">
         <h2 className="text-3xl font-semibold mb-10">Gallery</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <Image
-            src="/images/about1.jpg"
-            alt="Live performance photo 1"
-            width={400}
-            height={300}
-            className="rounded-lg w-full h-full object-cover hover:scale-105 transition-transform"
-          />
-          <Image
-            src="/images/about2.jpg"
-            alt="Live performance photo 2"
-            width={400}
-            height={300}
-            className="rounded-lg w-full h-full object-cover hover:scale-105 transition-transform"
-          />
-          <Image
-            src="/images/DSC_0272.png"
-            alt="Live performance photo 3"
-            width={400}
-            height={300}
-            className="rounded-lg w-full h-full object-cover hover:scale-105 transition-transform"
-          />
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          {GALLERY_IMAGES.slice(0, 3).map((image, idx) => (
+            <Image
+              key={idx}
+              src={`${BLOB_STORAGE_URL}/gallery/${image}`}
+              alt=""
+              width={400}
+              height={300}
+              loading="eager"
+              className="rounded-lg w-full h-full object-cover hover:scale-105 transition-transform"
+            />
+          ))}
         </div>
-        <Link
-          href="/gallery"
-          className="mt-8 text-neutral-400 hover:text-white underline underline-offset-4"
-        >
-          View Full Gallery →
-        </Link>
+        <IconLink href={'/gallery'} title={'View Full Gallery'} />
       </section>
 
       {/* Contact/Booking */}
-      <section className="max-w-2xl mx-auto px-6 py-24 text-center">
-        <h2 className="text-2xl font-semibold mb-4">Contact & Bookings</h2>
-        <Link
-          href="/contact"
-          className="text-neutral-400 hover:underline underline-offset-4 decoration-neutral-400"
-        >
-          Contact Me!
-        </Link>
+      <section className="max-w-4xl mx-auto px-6 py-24 border-t border-neutral-900">
+        <h2 className="text-3xl font-semibold mb-10">Contact and Bookings</h2>
+        <div className="flex flex-row items-center gap-1">
+          <p className="text-md text-neutral-300 leading-relaxed">
+            Reach out to Takoda for private parties, benefits, shows, or anything else through the{' '}
+          </p>
+          <IconLink href={'/contact'} title={'Contact Page'} />
+        </div>
       </section>
     </main>
   )
