@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import { ARTIST_NAME } from '../constants';
-
 export default function BioPage() {
   return (
     <div className='max-w-3xl mx-auto px-6 py-24'>
@@ -9,20 +6,20 @@ export default function BioPage() {
       <section className='mb-12'>
         <h2 className='text-xl font-semibold mb-4'>About</h2>
         <p className='text-neutral-400 leading-relaxed'>
-          {ARTIST_NAME} is a singer/songwriter based in [City], known for their
-          intimate lyrics and dynamic live performances. Drawing from personal
-          experiences and observations, each song tells a story of love,
-          heartbreak, hope, and the journey of self-discovery.
+          ALL PLACEHOLDER INFORMATION
+        </p>
+        <p className='text-neutral-400 leading-relaxed'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quidem odit, culpa aliquid qui laudantium inventore! Perspiciatis error perferendis aliquam laudantium libero totam eius vitae, hic veritatis deserunt, rerum quam?
+        </p>
+        <p className='text-neutral-400 leading-relaxed'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quidem odit, culpa aliquid qui laudantium inventore! Perspiciatis error perferendis aliquam laudantium libero totam eius vitae, hic veritatis deserunt, rerum quam?
         </p>
       </section>
 
       <section className='mb-12'>
         <h2 className='text-xl font-semibold mb-4'>Musical Influences</h2>
         <p className='text-neutral-400 leading-relaxed'>
-          Artist has cited influences ranging from classic folk storytellers to
-          modern indie rock. Their sound blends acoustic textures with subtle
-          electronic elements, creating a sonic landscape that is both grounded
-          and expansive.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos error vitae recusandae doloribus, perspiciatis iure nisi. Reprehenderit libero earum doloribus impedit accusamus consequatur, distinctio porro, amet corporis qui molestiae harum.
         </p>
       </section>
 
@@ -51,19 +48,6 @@ export default function BioPage() {
             </div>
           ))}
         </div>
-      </section>
-
-      <section>
-        <h2 className='text-xl font-semibold mb-4'>Management & Booking</h2>
-        <p className='text-neutral-400 mb-4'>
-          For bookings, press inquiries, or partnerships:
-        </p>
-        <Link
-          href='/contact'
-          className='group/link hover:underline underline-offset-4 decoration-neutral-400'
-        >
-          Contact Me!
-        </Link>
       </section>
     </div>
   );
