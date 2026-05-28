@@ -1,11 +1,11 @@
-import Image from "next/image"
-import Link from "next/link"
-import { RELEASES } from "./releases"
-import { ReleaseLink } from "./components/ReleaseLink"
-import { HeroCarousel } from "./components/HeroCarousel"
-import { BLOB_STORAGE_URL } from "./constants"
-import { GALLERY_IMAGES } from "./gallery"
-import { IconLink } from "./components/IconLink"
+import Image from "next/image";
+import Link from "next/link";
+import { RELEASES } from "./releases";
+import { ReleaseLink } from "./components/ReleaseLink";
+import { HeroCarousel } from "./components/HeroCarousel";
+import { BLOB_STORAGE_URL } from "./constants";
+import { GALLERY_IMAGES } from "./gallery";
+import { IconLink } from "./components/IconLink";
 
 export default function Home() {
   return (
@@ -22,10 +22,14 @@ export default function Home() {
 
           <Link href="/music" className="group block cursor-pointer">
             <div className="aspect-square bg-neutral-900 mb-6 group-hover:bg-neutral-800 transition-colors relative overflow-hidden flex items-center justify-center">
-              <span className="text-neutral-500 text-sm font-medium">See more of my music</span>
+              <span className="text-neutral-500 text-sm font-medium">
+                See more of my music
+              </span>
             </div>
             <h3 className="font-medium text-xl">Listen Now</h3>
-            <p className="text-neutral-500 mt-2 text-sm">Spotify • Apple Music • Bandcamp & more</p>
+            <p className="text-neutral-500 mt-2 text-sm">
+              Spotify • Apple Music • Bandcamp & more
+            </p>
           </Link>
         </div>
       </section>
@@ -39,11 +43,11 @@ export default function Home() {
             the coast of Maine and currently based in Bar Harbor.
           </p>
           <p className="text-lg text-neutral-300 mb-6 leading-relaxed">
-            He plays a curated selection of covers and originals, both live looped
-            and acoustic, using guitar and piano. Takoda&apos;s music is a thoughtful
-            blend of pop, rock, folk and hip-hop with honest lyrics. His
-            impressive live performances are celebrated for his songwriting
-            ability and technical musical skills.
+            He plays a curated selection of covers and originals, both live
+            looped and acoustic, using guitar and piano. Takoda&apos;s music is
+            a thoughtful blend of pop, rock, folk and hip-hop with honest
+            lyrics. His impressive live performances are celebrated for his
+            songwriting ability and technical musical skills.
           </p>
           <Image
             src={`${BLOB_STORAGE_URL}/gallery/DSC00743.JPG`}
@@ -55,8 +59,8 @@ export default function Home() {
           <p className="text-lg text-neutral-300 mb-6 leading-relaxed">
             Using live looping, Takoda layers acoustic guitar, percussion, bass
             and vocals using a single guitar and piano. He adds his fiery vocals
-            and layered harmonies to create the sound of a multi-instrumental band
-            with multiple singers. His music is always live with nothing
+            and layered harmonies to create the sound of a multi-instrumental
+            band with multiple singers. His music is always live with nothing
             pre-recorded.
           </p>
           <p className="text-lg text-neutral-300 mb-6 leading-relaxed">
@@ -82,7 +86,7 @@ export default function Home() {
             />
           ))}
         </div>
-        <IconLink href={'/gallery'} title={'View Full Gallery'} />
+        <IconLink href={"/gallery"} title={"View Full Gallery"} />
       </section>
 
       {/* Contact/Booking */}
@@ -90,11 +94,12 @@ export default function Home() {
         <h2 className="text-3xl font-semibold mb-10">Contact and Bookings</h2>
         <div className="flex flex-row items-center gap-1">
           <p className="text-md text-neutral-300 leading-relaxed">
-            Reach out to Takoda for private parties, benefits, shows, or anything else through the{' '}
+            Reach out to Takoda for private parties, benefits, shows, or
+            anything else through the{" "}
           </p>
-          <IconLink href={'/contact'} title={'Contact Page'} />
+          <IconLink href={"/contact"} title={"Contact Page"} />
         </div>
       </section>
     </main>
-  )
+  );
 }

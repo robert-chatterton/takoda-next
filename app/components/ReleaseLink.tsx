@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 import { Release } from "../releases";
 
 export function ReleaseLink({ release }: { release: Release }) {
@@ -14,7 +14,9 @@ export function ReleaseLink({ release }: { release: Release }) {
         />
       </div>
       <h3 className="font-medium text-xl">{release.title}</h3>
-      <p className="text-neutral-500 mt-2 text-sm">{release.type} • {release.year}</p>
+      <p className="text-neutral-500 mt-2 text-sm">
+        {release.type} • {release.year}
+      </p>
     </Link>
   );
 }

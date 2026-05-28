@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function ContactPage() {
   return (
@@ -46,7 +46,7 @@ export default function ContactPage() {
         ← Back to Home
       </Link>
     </div>
-  )
+  );
 }
 
 function ContactInfo({ label, value }: { label: string; value: string }) {
@@ -55,5 +55,5 @@ function ContactInfo({ label, value }: { label: string; value: string }) {
       <span className="text-neutral-500">{label}</span>
       <span>{value}</span>
     </p>
-  )
+  );
 }

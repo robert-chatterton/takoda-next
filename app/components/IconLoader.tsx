@@ -1,11 +1,11 @@
-import Image from "next/image"
+import Image from "next/image";
 
 interface IconLoaderProps {
-  src: string
-  alt?: string
-  width?: number
-  height?: number
-  className?: string
+  src: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+  className?: string;
 }
 
 /**
@@ -25,7 +25,7 @@ export function IconLoader({
   className = "",
 }: IconLoaderProps) {
   // Determine if image is already cached to conditionally apply priority
-  const isDynamic = src.includes("bandcamp.com/EmbeddedPlayer")
+  const isDynamic = src.includes("bandcamp.com/EmbeddedPlayer");
 
   return (
     <Image
@@ -37,5 +37,5 @@ export function IconLoader({
       priority={isDynamic ? false : undefined}
       unoptimized={isDynamic}
     />
-  )
+  );
 }

@@ -2,11 +2,11 @@ import { BLOB_STORAGE_URL } from "./constants";
 
 export interface Release {
   trackId: string;
-  title: string
-  type: "Album" | "Single" | "EP"
+  title: string;
+  type: "Album" | "Single" | "EP";
   albumArt: string;
-  year: number
-  bandcampSlug: string
+  year: number;
+  bandcampSlug: string;
   spotifyUrl: string;
   appleMusicUrl: string;
 }

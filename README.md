@@ -38,17 +38,20 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Deployment Instructions
 
 1. Link your Vercel account and deploy this repo to a production project:
+
    ```bash
    vercel login
    vercel deploy --prod
    ```
 
 2. Pull environment variables from Vercel (if you have them set):
+
    ```bash
    vercel env pull
    ```
 
 3. Build for production:
+
    ```bash
    vercel build --prod
    ```

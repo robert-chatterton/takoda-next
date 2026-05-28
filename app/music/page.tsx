@@ -1,8 +1,8 @@
-import Link from "next/link"
-import { RELEASES } from "../releases"
-import { BandcampIcon } from "@/app/components/BandcampIcon"
-import { SpotifyIcon } from "@/app/components/SpotifyIcon"
-import { AppleMusicIcon } from "@/app/components/AppleMusicIcon"
+import Link from "next/link";
+import { RELEASES } from "../releases";
+import { BandcampIcon } from "@/app/components/BandcampIcon";
+import { SpotifyIcon } from "@/app/components/SpotifyIcon";
+import { AppleMusicIcon } from "@/app/components/AppleMusicIcon";
 
 export default function ReleasesPage() {
   return (
@@ -26,7 +26,9 @@ export default function ReleasesPage() {
 
               {/* Share Links */}
               <div className="flex flex-row gap-4 items-center">
-                <p className="text-neutral-400 tracking-tight font-mono text-xs">stream on</p>
+                <p className="text-neutral-400 tracking-tight font-mono text-xs">
+                  stream on
+                </p>
                 <Link
                   href={`https://open.spotify.com/track/${release.spotifyUrl}`}
                   target="_blank"
@@ -66,5 +68,5 @@ export default function ReleasesPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }
