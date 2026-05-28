@@ -21,7 +21,7 @@ export function HeroCarousel() {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <Image
-        src={`${BLOB_STORAGE_URL}/gallery/IMG_8379.jpg`}
+        src={`${BLOB_STORAGE_URL}/gallery/DSC00564.JPG`}
         alt=""
         fill
         className={`object-cover object-[50%_20%] transition-opacity duration-1000 ease-in-out grayscale ${
