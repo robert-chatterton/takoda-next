@@ -12,6 +12,7 @@ export const YOUTUBE_MUSIC =
   'https://music.youtube.com/@TakodaDionneMusic';
 export const BANDCAMP = 'https://takodadionne.bandcamp.com/';
 export const DISTRONET_ID = 'https://tr.ee/75Q4r2Yx';
+export const SOUNDCLOUD = 'https://soundcloud.com/takoda-dionne';
 
 // Social Media
 export const INSTAGRAM = 'https://www.instagram.com/takodadionne/';

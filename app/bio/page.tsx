@@ -1,3 +1,5 @@
+import { IconLink } from "../components/IconLink";
+
 export default function BioPage() {
   return (
     <div className='max-w-3xl mx-auto px-6 py-24'>
@@ -57,10 +59,36 @@ export default function BioPage() {
       </section>
 
       <section className='flex flex-col mb-12 gap-4 indent-0'>
+        <h2 className='text-xl font-semibold indent-0'>Media Appearances</h2>
+        <ul className='ml-6 list-disc flex flex-col gap-4'>
+          <li>
+            <IconLink title={'MDI Islander Feature'} newPage href={'https://www.mdislander.com/lifestyle/arts/rhythms-and-red-converse-takoda-dionnes-musical-success/article_c7f8ce9c-56a4-447e-a64e-4513cb37550c.html'} />
+          </li>
+          <li>
+            <IconLink title={'My interview on The Nite Show Performance Series'} newPage href={'https://www.youtube.com/watch?v=Do_yTNvO4q0'} />
+          </li>
+          <li>
+            <IconLink title={'My interview on Northeast Corner on MPR'} newPage href={'https://www.mainepublic.org/northeast-corner/2026-02-22/northeast-corner-february-22nd-2026'} />
+          </li>
+          <li>
+            <IconLink title={'Live interview on Star 97.7 Radio'} newPage href={'https://star977fm.com/index.php/star-morning-show/morning-music-showcase/'} />
+          </li>
+        </ul>
+      </section>
+
+      <section className='flex flex-col mb-12 gap-4 indent-0'>
         <h2 className='text-xl font-semibold indent-0'>Performances</h2>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
+        <ul className='ml-6 list-disc flex flex-col gap-4'>
+          <li>
+            <IconLink title={'Performing "Back To" on The Nite Show Performance Series'} newPage href={'https://www.youtube.com/watch?v=T_6N4c1uRVA'} />
+          </li>
+          <li>
+            <IconLink title={'Performing a cover of "The Scientist" by Coldplay on The Nite Show Performance Series'} newPage href={'https://www.youtube.com/watch?v=T_6N4c1uRVA'} />
+          </li>
+          <li>
+            <IconLink title={'Live performance on Star 97.7 Radio'} newPage href={'https://star977fm.com/index.php/star-morning-show/morning-music-showcase/'} />
+          </li>
+        </ul>
       </section>
     </div>
   );

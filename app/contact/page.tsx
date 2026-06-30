@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { APPLE_MUSIC, BANDCAMP, EMAIL, FACEBOOK, INSTAGRAM, SPOTIFY, YOUTUBE_CHANNEL, YOUTUBE_MUSIC } from '../constants';
+import { APPLE_MUSIC, BANDCAMP, EMAIL, FACEBOOK, INSTAGRAM, SOUNDCLOUD, SPOTIFY, YOUTUBE_CHANNEL, YOUTUBE_MUSIC } from '../constants';
 
 export default function ContactPage() {
   return (
@@ -22,10 +22,11 @@ export default function ContactPage() {
       <section className='mb-16'>
         <h2 className='text-xl font-semibold mb-6'>Streaming Services</h2>
         <div className='space-y-4'>
-          <ContactInfoLink label='Spotify' value='Takoda Dionne' href={SPOTIFY} />
-          <ContactInfoLink label='Apple Music' value='Takoda Dionne' href={APPLE_MUSIC} />
-          <ContactInfoLink label='Youtube Music' value='@TakodaDionneMusic' href={YOUTUBE_MUSIC} />
-          <ContactInfoLink label='Bandcamp' value='Takoda Dionne' href={BANDCAMP} />
+          <ContactInfoLink label='Spotify' value='Takoda Dionne on Spotify' href={SPOTIFY} />
+          <ContactInfoLink label='Apple Music' value='Takoda Dionne on Apple Music' href={APPLE_MUSIC} />
+          <ContactInfoLink label='Youtube Music' value='@TakodaDionneMusic on Youtube Music' href={YOUTUBE_MUSIC} />
+          <ContactInfoLink label='Bandcamp' value='Takoda Dionne on Bandcamp' href={BANDCAMP} />
+          <ContactInfoLink label='Soundcloud' value='Takoda Dionne on Soundcloud' href={SOUNDCLOUD} />
         </div>
       </section>
     </div>
