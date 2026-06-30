@@ -83,7 +83,7 @@ export default function BioPage() {
             <IconLink title={'Performing "Back To" on The Nite Show Performance Series'} newPage href={'https://www.youtube.com/watch?v=T_6N4c1uRVA'} />
           </li>
           <li>
-            <IconLink title={'Performing a cover of "The Scientist" by Coldplay on The Nite Show Performance Series'} newPage href={'https://www.youtube.com/watch?v=T_6N4c1uRVA'} />
+            <IconLink title={'Performing a cover of "The Scientist" by Coldplay on The Nite Show Performance Series'} newPage href={'https://www.youtube.com/watch?v=M3Cdff2G5lg'} />
           </li>
           <li>
             <IconLink title={'Live performance on Star 97.7 Radio'} newPage href={'https://star977fm.com/index.php/star-morning-show/morning-music-showcase/'} />
