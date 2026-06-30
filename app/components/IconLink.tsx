@@ -1,7 +1,15 @@
 import Link from 'next/link';
 import { SquareArrowOutUpRight } from 'lucide-react';
 
-export function IconLink({ title, href, newPage }: { title: string; href: string; newPage?: boolean; }) {
+export function IconLink({
+  title,
+  href,
+  newPage,
+}: {
+  title: string;
+  href: string;
+  newPage?: boolean;
+}) {
   return (
     <Link
       href={href}

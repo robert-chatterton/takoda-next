@@ -3,13 +3,13 @@ export const LOWER_ARTIST_NAME = 'takoda dionne';
 
 // Music Streaming Links
 export const SPOTIFY = 'https://open.spotify.com/artist/7y4kmrKNGp4AACGHmQQe5B';
-export const APPLE_MUSIC = 'https://music.apple.com/us/artist/takoda-dionne/1806844759';
+export const APPLE_MUSIC =
+  'https://music.apple.com/us/artist/takoda-dionne/1806844759';
 export const YOUTUBE_EMBED =
   'https://www.youtube.com/embed/N2givJ9tIgo?si=7gUoYuePVPNFO25w';
 export const YOUTUBE_CHANNEL =
   'https://www.youtube.com/channel/UC5ApizsR_423zo_Qwm_C2Aw';
-export const YOUTUBE_MUSIC =
-  'https://music.youtube.com/@TakodaDionneMusic';
+export const YOUTUBE_MUSIC = 'https://music.youtube.com/@TakodaDionneMusic';
 export const BANDCAMP = 'https://takodadionne.bandcamp.com/';
 export const DISTRONET_ID = 'https://tr.ee/75Q4r2Yx';
 export const SOUNDCLOUD = 'https://soundcloud.com/takoda-dionne';
