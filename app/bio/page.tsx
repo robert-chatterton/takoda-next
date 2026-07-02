@@ -1,11 +1,45 @@
+import Image from 'next/image';
 import { IconLink } from '../components/IconLink';
+import { BLOB_STORAGE_URL } from '../constants';
 
 export default function BioPage() {
+  const quotes = [
+    {
+      outlet:
+        'Paul Dupuis, Owner / General Manager / Morning Show Co-host @ Star 97.7 Radio in Ellsworth, Maine',
+      quote:
+        'Takoda is far beyond his years with songwriting and connecting with his audience.  We love having him perform on Star 97.7.',
+    },
+    {
+      outlet:
+        'Scomo, Program Director and Music Director @ WKIT in Bangor, Maine',
+      quote:
+        "Takoda Dionne is one of Maine's most promising songwriters. He writes with a maturity and originality that belie his years. Takoda has that rare combination of songwriting talent, stage presence and work ethic that should lead to some very good things.",
+    },
+    {
+      outlet:
+        'Mike Dow, Operations Director @ Star 97.7 Radio in Ellsworth, Maine',
+      quote:
+        "Takoda is a true artist with a constantly expanding catalog of songs that stay with you long after hearing them for the first time. Here at Star 97.7, we've been blown away by his endless creativity, his energy, and his personality. Takoda has become an integral part of Maine's vibrant music scene because he's the real deal.",
+    },
+    {
+      outlet: 'Steve Peer, Drummer and Entrepreneur',
+      quote:
+        'Takoda is unstoppable. His raw talent is revealed as he fearlessly experiments with sound and lyrics.  With a gift for melody, his ability to write hooks and an accessible chorus, pair well with his unplugged or electronic delivery.  His musical dexterity, technical coordination, stamina, social commentary, metaphor and rhyme make for an exhilarating live show and equally as bold, studio recordings.  Takoda is a genuine talent that we will all be watching.',
+    },
+  ];
+
   return (
     <div className='max-w-3xl mx-auto px-6 py-24'>
       <h1 className='text-5xl font-bold mb-8 tracking-tight'>Biography</h1>
 
       <section className='flex flex-col mb-12 gap-4 indent-0'>
+        <div className='pb-6 border-b border-neutral-900 last:border-0 last:pb-0'>
+          <p className='text-neutral-300 mt-1 italic'>
+            &quot;{quotes[0].quote}&quot;
+          </p>
+          <span className='text-neutral-500 text-sm'>{quotes[0].outlet}</span>
+        </div>
         <h2 className='text-xl font-semibold indent-0'>About</h2>
         <p className='text-neutral-400 leading-relaxed'>
           Takoda&apos;s love of music began as a young child listening to a
@@ -20,6 +54,19 @@ export default function BioPage() {
           at songwriting. He wrote his first song in middle school about the
           challenges of being noticed by someone who doesn&apos;t see you.
         </p>
+        <Image
+          src={`${BLOB_STORAGE_URL}/gallery/IMG_2499.jpeg`}
+          alt=''
+          width={200}
+          height={400}
+          className='rounded-lg mb-6 overflow-hidden w-full max-w-md mx-auto'
+        />
+        <div className='pb-6 border-b border-neutral-900 last:border-0 last:pb-0'>
+          <p className='text-neutral-300 mt-1 italic'>
+            &quot;{quotes[1].quote}&quot;
+          </p>
+          <span className='text-neutral-500 text-sm'>{quotes[1].outlet}</span>
+        </div>
         <p className='text-neutral-400 leading-relaxed'>
           Once he began practicing the guitar consistently in 2020 his father
           gifted him a little Martin guitar and loop pedal. Takoda had just
@@ -45,6 +92,19 @@ export default function BioPage() {
           without them and someone asked, “where are the red shoes?”; he has
           worn them to every gig since.
         </p>
+        <Image
+          src={`${BLOB_STORAGE_URL}/gallery/IMG_2863.jpeg`}
+          alt=''
+          width={200}
+          height={400}
+          className='rounded-lg mb-6 overflow-hidden w-full max-w-md mx-auto'
+        />
+        <div className='pb-6 border-b border-neutral-900 last:border-0 last:pb-0'>
+          <p className='text-neutral-300 mt-1 italic'>
+            &quot;{quotes[2].quote}&quot;
+          </p>
+          <span className='text-neutral-500 text-sm'>{quotes[2].outlet}</span>
+        </div>
         <p className='text-neutral-400 leading-relaxed'>
           Takoda layers acoustic and electric guitar, piano and he adds his
           fiery vocals and layered harmonies to create the sound of a
@@ -63,46 +123,11 @@ export default function BioPage() {
           produced singles and an EP will be released in 2026. His original
           music can be found on all major streaming platforms.
         </p>
-      </section>
-
-      <section className='flex flex-col mb-12 gap-4 indent-0'>
-        <h2 className='text-xl font-semibold indent-0'>Quotes</h2>
-        <div>
-          {[
-            {
-              outlet:
-                'Paul Dupuis, Owner / General Manager / Morning Show Co-host @ Star 97.7 Radio in Ellsworth, Maine',
-              quote:
-                'Takoda is far beyond his years with songwriting and connecting with his audience.  We love having him perform on Star 97.7.',
-            },
-            {
-              outlet:
-                'Scomo, Program Director and Music Director @ WKIT in Bangor, Maine',
-              quote:
-                "Takoda Dionne is one of Maine's most promising songwriters. He writes with a maturity and originality that belie his years. Takoda has that rare combination of songwriting talent, stage presence and work ethic that should lead to some very good things.",
-            },
-            {
-              outlet:
-                'Mike Dow, Operations Director @ Star 97.7 Radio in Ellsworth, Maine',
-              quote:
-                "Takoda is a true artist with a constantly expanding catalog of songs that stay with you long after hearing them for the first time. Here at Star 97.7, we've been blown away by his endless creativity, his energy, and his personality. Takoda has become an integral part of Maine's vibrant music scene because he's the real deal.",
-            },
-            {
-              outlet: 'Steve Peer, Drummer and Entrepreneur',
-              quote:
-                'Takoda is unstoppable. His raw talent is revealed as he fearlessly experiments with sound and lyrics.  With a gift for melody, his ability to write hooks and an accessible chorus, pair well with his unplugged or electronic delivery.  His musical dexterity, technical coordination, stamina, social commentary, metaphor and rhyme make for an exhilarating live show and equally as bold, studio recordings.  Takoda is a genuine talent that we will all be watching.',
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className='pb-6 border-b border-neutral-900 last:border-0 last:pb-0'
-            >
-              <p className='text-neutral-300 mt-1 italic'>
-                &quot;{item.quote}&quot;
-              </p>
-              <span className='text-neutral-500 text-sm'>{item.outlet}</span>
-            </div>
-          ))}
+        <div className='pb-6 border-b border-neutral-900 last:border-0 last:pb-0'>
+          <p className='text-neutral-300 mt-1 italic'>
+            &quot;{quotes[3].quote}&quot;
+          </p>
+          <span className='text-neutral-500 text-sm'>{quotes[3].outlet}</span>
         </div>
       </section>
 
