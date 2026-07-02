@@ -134,15 +134,6 @@ export default function BioPage() {
               }
             />
           </li>
-          <li>
-            <IconLink
-              title={'Live interview on Star 97.7 Radio'}
-              newPage
-              href={
-                'https://star977fm.com/index.php/star-morning-show/morning-music-showcase/'
-              }
-            />
-          </li>
         </ul>
       </section>
 

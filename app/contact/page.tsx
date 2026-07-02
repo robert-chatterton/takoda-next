@@ -7,6 +7,7 @@ import {
   INSTAGRAM,
   SOUNDCLOUD,
   SPOTIFY,
+  TIKTOK,
   YOUTUBE_CHANNEL,
   YOUTUBE_MUSIC,
 } from '../constants';
@@ -16,7 +17,7 @@ export default function ContactPage() {
     <div className='max-w-2xl mx-auto px-6 py-24'>
       <h1 className='text-5xl font-bold mb-8 tracking-tight'>Contact</h1>
       <p className='text-neutral-400 text-lg mb-16'>
-        Booking, press inquiries, and general questions.
+        For booking, press inquiries, and general questions, the best place to reach me is my email.
       </p>
 
       <section className='mb-16'>
@@ -27,6 +28,11 @@ export default function ContactPage() {
             label='Instagram'
             value='@takodadionne'
             href={INSTAGRAM}
+          />
+          <ContactInfoLink
+            label='TikTok'
+            value='@takodadionne'
+            href={TIKTOK}
           />
           <ContactInfoLink
             label='Facebook'

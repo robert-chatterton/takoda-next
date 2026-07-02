@@ -16,6 +16,7 @@ export const SOUNDCLOUD = 'https://soundcloud.com/takoda-dionne';
 
 // Social Media
 export const INSTAGRAM = 'https://www.instagram.com/takodadionne/';
+export const TIKTOK = 'https://www.tiktok.com/@takodadionne';
 export const FACEBOOK =
   'https://www.facebook.com/people/Takoda-Dionne/61573557910394/';
 export const EMAIL = 'takodadionne@gmail.com';
