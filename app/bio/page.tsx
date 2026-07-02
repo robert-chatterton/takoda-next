@@ -107,7 +107,9 @@ export default function BioPage() {
       </section>
 
       <section className='flex flex-col mb-12 gap-4 indent-0'>
-        <h2 className='text-xl font-semibold indent-0'>Interviews & Media Appearances</h2>
+        <h2 className='text-xl font-semibold indent-0'>
+          Interviews & Media Appearances
+        </h2>
         <ul className='ml-6 list-disc flex flex-col gap-4'>
           <li>
             <IconLink

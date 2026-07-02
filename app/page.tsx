@@ -39,8 +39,11 @@ export default function Home() {
         <h2 className='text-3xl font-semibold mb-10'>About Takoda</h2>
         <div className='bg-neutral-900/50 rounded-lg p-8'>
           <p className='text-lg text-neutral-300 mb-6 leading-relaxed'>
-            Takoda Dionne is a live-looping singer-songwriter from the coast of Maine performing originals and a variety of pop classics and rock favorites.{' '}
-            Using live looping to layer vocals and instruments in real time, Takoda creates a full, energetic sound that blends familiar songs with his own unique sound.
+            Takoda Dionne is a live-looping singer-songwriter from the coast of
+            Maine performing originals and a variety of pop classics and rock
+            favorites. Using live looping to layer vocals and instruments in
+            real time, Takoda creates a full, energetic sound that blends
+            familiar songs with his own unique sound.
           </p>
           <p className='text-lg text-neutral-300 mb-6 leading-relaxed'>
             He plays a curated selection of covers and originals, both live
@@ -57,10 +60,10 @@ export default function Home() {
             className='rounded-lg mb-6 overflow-hidden w-full max-w-md mx-auto grayscale'
           />
           <p className='text-lg text-neutral-300 mb-6 leading-relaxed'>
-            Takoda layers acoustic guitar, percussion, bass
-            and vocals using a single guitar and piano. He adds his fiery vocals
-            and layered harmonies to create the sound of a multi-instrumental
-            band with multiple singers. His music is always live with nothing
+            Takoda layers acoustic guitar, percussion, bass and vocals using a
+            single guitar and piano. He adds his fiery vocals and layered
+            harmonies to create the sound of a multi-instrumental band with
+            multiple singers. His music is always live with nothing
             pre-recorded.
           </p>
           <p className='text-lg text-neutral-300 mb-6 leading-relaxed'>

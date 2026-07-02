@@ -17,7 +17,8 @@ export default function ContactPage() {
     <div className='max-w-2xl mx-auto px-6 py-24'>
       <h1 className='text-5xl font-bold mb-8 tracking-tight'>Contact</h1>
       <p className='text-neutral-400 text-lg mb-16'>
-        For booking, press inquiries, and general questions, the best place to reach me is my email.
+        For booking, press inquiries, and general questions, the best place to
+        reach me is my email.
       </p>
 
       <section className='mb-16'>
@@ -29,11 +30,7 @@ export default function ContactPage() {
             value='@takodadionne'
             href={INSTAGRAM}
           />
-          <ContactInfoLink
-            label='TikTok'
-            value='@takodadionne'
-            href={TIKTOK}
-          />
+          <ContactInfoLink label='TikTok' value='@takodadionne' href={TIKTOK} />
           <ContactInfoLink
             label='Facebook'
             value='Takoda Dionne'
