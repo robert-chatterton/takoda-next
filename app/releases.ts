@@ -12,16 +12,16 @@ export interface Release {
 }
 
 export const RELEASES: Release[] = [
-  // {
-  //   trackId: '1672379630', // FIXME
-  //   title: 'Liar Liar',
-  //   type: 'Single',
-  //   year: 2026,
-  //   albumArt: `${BLOB_STORAGE_URL}/music/liar-liar-cover.jpeg`,
-  //   bandcampSlug: 'liar-liar',
-  //   spotifyUrl: '1GZQeATN2p8YCQuJCNytIV', // FIXME
-  //   appleMusicUrl: 'liar-liar/1885384286', // FIXME
-  // },
+  {
+    trackId: '232138145',
+    title: 'Liar Liar',
+    type: 'Single',
+    year: 2026,
+    albumArt: `${BLOB_STORAGE_URL}/music/liar-liar-cover.jpeg`,
+    bandcampSlug: 'liar-liar',
+    spotifyUrl: '0loK4ewepiQkiA1xVGNqgb',
+    appleMusicUrl: 'liar-liar/1885471203',
+  },
   {
     trackId: '1672379630',
     title: 'To Find You',
