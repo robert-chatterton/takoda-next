@@ -1,7 +1,7 @@
 import { BLOB_STORAGE_URL } from './constants';
 
 export interface Release {
-  trackId: string;
+  trackId: string; // get this from the bandcamp embed link
   title: string;
   type: 'Album' | 'Single' | 'EP';
   albumArt: string;
@@ -12,6 +12,16 @@ export interface Release {
 }
 
 export const RELEASES: Release[] = [
+  {
+    trackId: '3775482135',
+    title: 'Far Away',
+    type: 'Single',
+    year: 2026,
+    albumArt: `${BLOB_STORAGE_URL}/music/far-away-cover.jpeg`,
+    bandcampSlug: 'far-away',
+    spotifyUrl: '0w3gOJVbmRvQCuh0Qdl7ht',
+    appleMusicUrl: 'far-away/1885470900',
+  },
   {
     trackId: '232138145',
     title: 'Liar Liar',
