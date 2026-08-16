@@ -1,6 +1,7 @@
 export const GALLERY_IMAGES = [
   'DSC01191.JPEG',
   'IMG_7930.jpeg',
+  'IMG_4208_50.jpeg',
   'IMG_2561.jpeg',
   'IMG_9566.JPG',
   'DSC00501.JPG',
@@ -27,6 +28,7 @@ export const GALLERY_IMAGES = [
   'DSC00502.jpeg',
   'DSC00746.JPG',
   'IMG_0637.jpeg',
+  'IMG_4180_50.jpeg',
   'DSC00564.JPG',
   'DSC00765.JPG',
   'IMG_5935.jpeg',
