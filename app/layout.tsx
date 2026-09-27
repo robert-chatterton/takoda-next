@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { ARTIST_NAME, LOWER_ARTIST_NAME } from './constants';
 import { Music, MicVocal, UserRound, Image as ImageIcon } from 'lucide-react';
 import localFont from 'next/font/local';
+import { Banner } from './components/Banner';
 
 const STACK_SANS_FONT = localFont({
   src: './fonts/StackSansHeadline-VariableFont_wght.ttf',
@@ -72,7 +73,10 @@ export default function RootLayout({
             </Link>
           </nav>
         </header>
-        <main className='flex-1 pt-16'>{children}</main>
+        <div className='flex-1 flex flex-col pt-16'>
+          <Banner />
+          <main className='flex-1'>{children}</main>
+        </div>
       </body>
     </html>
   );
