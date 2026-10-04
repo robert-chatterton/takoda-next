@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { RELEASES } from './releases';
 import { ReleaseLink } from './components/ReleaseLink';
 import { HeroCarousel } from './components/HeroCarousel';
-import { BLOB_STORAGE_URL } from './constants';
+import { BLOB_STORAGE_URL, YOUTUBE_EMBED } from './constants';
 import { GALLERY_IMAGES } from './gallery';
 import { IconLink } from './components/IconLink';
 
@@ -31,6 +31,20 @@ export default function Home() {
               Spotify • Apple Music • Bandcamp & more
             </p>
           </Link>
+        </div>
+      </section>
+
+      {/* Featured Video */}
+      <section className='max-w-4xl mx-auto px-6 py-24 border-t border-neutral-900'>
+        <h2 className='text-3xl font-semibold mb-10'>Featured</h2>
+        <div className='relative w-full aspect-video rounded-lg overflow-hidden'>
+          <iframe
+            src={YOUTUBE_EMBED}
+            title='Featured video'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            allowFullScreen
+            className='absolute inset-0 w-full h-full'
+          />
         </div>
       </section>
 
