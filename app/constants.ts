@@ -6,7 +6,7 @@ export const SPOTIFY = 'https://open.spotify.com/artist/7y4kmrKNGp4AACGHmQQe5B';
 export const APPLE_MUSIC =
   'https://music.apple.com/us/artist/takoda-dionne/1806844759';
 export const YOUTUBE_EMBED =
-  'https://www.youtube.com/embed/TmNTWexm7dk?si=NZaCFeDFTBE2lfvJ';
+  'https://www.youtube.com/embed/JzMPJwcetB4?si=_0BIxX00pYYxsTC4';
 export const YOUTUBE_CHANNEL =
   'https://www.youtube.com/channel/UC5ApizsR_423zo_Qwm_C2Aw';
 export const YOUTUBE_MUSIC = 'https://music.youtube.com/@TakodaDionneMusic';
